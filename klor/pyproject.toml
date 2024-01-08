@@ -1,0 +1,17 @@
+[project]
+name = "klor"
+version = "1.0.0"
+authors = [
+  { name="Kotzilla"},
+]
+description = "A libre color library"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/thekotzilla/klor"

@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: klor
+Version: 1.0.0
+Summary: A libre color library
+Author: Kotzilla
+Project-URL: Homepage, https://github.com/thekotzilla/klor
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
