@@ -1,6 +1,6 @@
 [project]
 name = "klor"
-version = "1.1.0"
+version = "1.1.1"
 authors = [
   { name="Kotzilla"},
 ]
@@ -15,3 +15,8 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://github.com/thekotzilla/klor"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["main*"]
+namespaces = false
