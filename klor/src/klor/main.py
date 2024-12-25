@@ -1,5 +1,18 @@
 
-def kolored(message, color='0', background=0, bold=False, italic=False):
+def kolored(message, color='0', background=0, bold=False, italic=False): -> str
+    """
+    Colorizes the given message with the specified color, background, and styles.
+
+    Args:
+        message (str): The text to colorize.
+        color (str): The foreground color (default is '0').
+        background (str): The background color (default is '0').
+        bold (bool): Whether the text should be bold (default is False).
+        italic (bool): Whether the text should be italic (default is False).
+
+    Returns:
+        str: The colorized message.
+    """
     messager = str(message)
 
     colors = {'0': '', 'black': '\33[30m', 'red': '\33[31m', 'green': '\33[32m', 'yellow': '\33[33m', 'blue': '\33[34m', 'purple': '\33[35m', 'white': '\33[37m'}
@@ -18,14 +31,5 @@ def kolored(message, color='0', background=0, bold=False, italic=False):
 
     kolor = colors.get(color)
     backolor = backcolors.get(background)
-    result = backolor + kolor + str(kbold) + str(kitalic) + messager + '\033[0m'
+    result = f'{backolor}{kolor}{kbold}{kitalic}{messager}{\033[0m}'
     return result
-
-def available_colors():
-    print('\33[30m' + 'Black')
-    print('\33[31m' + 'Red')
-    print('\33[32m' + 'Green')
-    print('\33[33m' + 'Yellow')
-    print('\33[34m' + 'Blue')
-    print('\33[35m' + 'Purple')
-    print('\33[37m' + 'White')
