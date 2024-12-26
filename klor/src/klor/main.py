@@ -1,5 +1,4 @@
-
-def kolored(message, color='0', background=0, bold=False, italic=False): -> str
+def kolored(message, color='0', background='0', bold=False, italic=False) -> str:
     """
     Colorizes the given message with the specified color, background, and styles.
 
@@ -15,21 +14,20 @@ def kolored(message, color='0', background=0, bold=False, italic=False): -> str
     """
     messager = str(message)
 
-    colors = {'0': '', 'black': '\33[30m', 'red': '\33[31m', 'green': '\33[32m', 'yellow': '\33[33m', 'blue': '\33[34m', 'purple': '\33[35m', 'white': '\33[37m'}
-    backcolors = {'0': '', 'black': '\33[40m', 'red': '\33[41m', 'green': '\33[42m', 'yellow': '\33[43m', 'blue': '\33[44m', 'purple': '\33[45m', 'white': '\33[47m'}
+    colors = {
+        '0': '', 'black': '\33[30m', 'red': '\33[31m', 'green': '\33[32m', 
+        'yellow': '\33[33m', 'blue': '\33[34m', 'purple': '\33[35m', 'white': '\33[37m'
+    }
+    backcolors = {
+        '0': '', 'black': '\33[40m', 'red': '\33[41m', 'green': '\33[42m', 
+        'yellow': '\33[43m', 'blue': '\33[44m', 'purple': '\33[45m', 'white': '\33[47m'
+    }
 
-    if bold == True:
-        kbold = '\33[1m'
-    else:
-        kbold = ''
-    
+    kbold = '\33[1m' if bold else ''
+    kitalic = '\33[3m' if italic else ''
 
-    if italic == True:
-        kitalic = '\33[3m'
-    else:
-        kitalic = ''
+    kolor = colors.get(color, '')
+    backolor = backcolors.get(background, '')
 
-    kolor = colors.get(color)
-    backolor = backcolors.get(background)
-    result = f'{backolor}{kolor}{kbold}{kitalic}{messager}{\033[0m}'
+    result = f'{backolor}{kolor}{kbold}{kitalic}{messager}\033[0m'
     return result
